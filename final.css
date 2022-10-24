@@ -18,7 +18,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
-    background: linear-gradient(180deg, rgb(90,150,119), transparent);
+background:rgb(90,150,119);
 }
 
 footer{
@@ -52,54 +52,102 @@ footer{
 /* CSS Navbar*/
 
 
+@media screen and (min-width: 601px) {
+  .navbar {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    font-size: 1rem;
+  }
+}
+
 .navbar{
   width: 100%;
-  margin: auto;
-  padding: 3% 1%;
   display: block;
-  text-align: center;
+text-align-last: center;
   justify-content: space-between;
   position: absolute;
-  z-index: +2;
-  margin-top: 6%;
+  z-index: 1;
+  margin-top: 11.5vh;
+
 }
 
 .navbar ul li {
   list-style:none;
   display:inline-block;
-  margin: 0 5%;
+  text-align: center;
+  margin-left: 3.5vw;
+  margin-right: 3.5vw;
   position: relative;
-  font-size: 18px;
 }
+
 .navbar ul li a{
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
   font-weight: 550;
-
 }
+
 .navbar ul li::after{
   content:'';
-  height: 3px;
+  height: 0.4vh;
   width: 0;
   background: #009688;
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -1vh;
   transition: 1s;
 }
+
 .navbar ul li:hover::after{
   width: 100%;
 }
 
 
+@media screen and (min-width: 601px) {
+  .HomePicture img {
+    width: 330px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-top: 8vh;
+    margin-left: -165px; /* HALF OF THE WIDTH */
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .HomePicture img {
+    width: 220px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-top: 12vh;
+    margin-left: -110px; /* HALF OF THE WIDTH */
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .picture img {
+    width: 330px;
+    height: auto;
+    margin-top: 4vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .picture img {
+    width: 220px;
+    height: auto;
+    margin-top: 4vh;
+  }
+}
 
 .picture img{
-  width: 330px;
-  height: 330px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 0.35vh solid white;
   object-fit: cover;
   transition: 0.5s;
 }
@@ -112,86 +160,113 @@ position: relative;
 
 .picture img:hover{
   transform: scale(1.05);
-  box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0.5vh 0.5vh 3vh rgba(0,0,0,0.5);
 }
 
 .HomePicture img{
-  width: 220px;
-  height: 220px;
   border-radius: 50%;
-  position:relative;
-  left: 50%;
-  margin-left: -110px;
-  border: 3px solid white;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  position: relative;
+  border: 0.35vh solid white;
+  box-shadow: 0.5vh 0.5vh 3vh rgba(0,0,0,0.5);
   cursor:pointer;
   transition: 0.5s;
   user-select: none;
   filter:grayscale(80%);
-  z-index: +1;
 }
 
 .HomePicture{
-  position:relative;
-}
-
-.Home{
-  margin-top:10%;
+    margin-top:5%;
 }
 
 .HomePicture img:hover{
   filter: grayscale(0%);
   transform: scale(1.05);
-  box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0.5vh 0.5vh 3vh rgba(0,0,0,0.5);
 }
 
 .HomeContent{
   width: 100%;
   position: relative;
   display:grid;
-  transform: translateY(-50%);
+  transform: translateY(25%);
   text-align: center;
   color: #fff;
-  margin-top:12%;
+  margin-top: -3vh;
 }
 
 
+@media screen and (min-width: 601px) {
+  .HomeContent h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .HomeContent h1 {
+    font-size: 2.5rem;
+  }
+}
+
 .HomeContent h1{
-  font-size: 70px;
   position: relative;
+  margin-top:-2vh;
+}
+
+@media screen and (min-width: 601px) {
+  .HomeContent p{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .HomeContent p{
+    font-size: 1.5rem;
+  }
 }
 
 .HomeContent p{
-  margin: 20px auto;
+  margin: auto auto;
   font-weight: 100;
-  line-height: 25px;
-  font-size: 35px;
+  line-height: 4vh;
   font-weight: normal;
   position: relative;
 }
 
+@media screen and (min-width: 1130px) {
+  .actionbutton button{
+      min-width: 12vw;
+      font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .actionbutton button{
+    min-width: 22vw;
+    font-size: 17px;
+  }
+}
+
 .actionbutton button{
-  width: 200px;
   padding: 15px 0;
   text-align: center;
-  margin: 20px 10px;
+  margin: 1% ;
   border-radius: 25px;
   font-weight:normal;
   font-style:normal;
-  font-size: 17px;
-  border: 2px solid #009688;
+  border: 0.25vh solid #009688;
   background: transparent;
   color: #fff;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+
 }
 
 .actionbutton span{
     background: #009688;
     height: 100%;
     width: 0%;
-    border-radius: 25px;
+    border-radius: 1vh;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -201,22 +276,8 @@ position: relative;
 
 .actionbutton button:hover span{
   width: 100%;
-    opacity: 0.5;
+  opacity: 0.5;
 }
-
-.HomeText{
-  width: 100%;
-  position:absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
-  text-align:left;
-  color: #fff;
-  letter-spacing: 1px;
-  line-height: 25px;
-}
-
-
 
 
 /* CSS Lebenslauf*/
@@ -226,7 +287,7 @@ position: relative;
   width: 100%;
   max-width: 1000px;
   min-width: 100px;
-  margin: 5%;
+  margin-top:  14%;
   width: min(100% - 2rem, 1000px);
   margin-inline: auto;
   display: grid;
@@ -387,7 +448,6 @@ p{
   text-transform: uppercase;
   color: #000;
   font-weight: 600;
-
 }
 
 .about .box .year_company h4{
@@ -486,7 +546,6 @@ button{
 
 .container{
   position: relative;
-
   display: grid;
   grid-template-columns: 2fr 1fr;
   width: min(100% - 2rem, 1000px);
@@ -554,33 +613,32 @@ button{
 .expertise{
 display: inline-block;
 align-items: center;
-
+float: left;
 width: 22%;
-height: 40%;
+height: auto;
 padding: 30px 10px;
 margin-left: 2.25%;
 text-align: center;
-box-shadow: 0 0 15px 1px rgba(37, 73, 214, 0.4);
+box-shadow: 0 0 15px 1px rgba(0, 150, 136, 0.7);
 background: rgba(60, 60, 59, 0.4);
-
 }
 
 .expertise:hover{
   transition: 0.8s;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .expertise small{
-  padding-top: 10px;
+  padding-top: 1vh;
   display: block;
 }
 
 .expertise b{
-  padding-top: 15px;
+  padding-top: 4vh;
   display: block;
-
+  font-size: 1.5rem;
+  font-weight: 500;
 }
-
 
 /* CSS Kontakt*/
 
@@ -786,7 +844,7 @@ h1{
 }
 
 .gallery-box:nth-child(n):hover{
-  flex-basis: 65%;
+  flex-basis: 70%;
 }
 
 h1{
@@ -796,6 +854,25 @@ h1{
   text-align: center;
 }
 
+@media screen and (min-width: 1001px) {
+  .AboutMe .contact .content {
+    margin-top: 4vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .AboutMe .contact .content {
+    margin-top: 10vh;
+  }
+}
+
 .AboutMe .contact .content{
-  margin-top: -8%;
+
+  display: inline-block;
+  position:relative;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  box-shadow: 0 0 15px 1px rgba(0, 150, 136, 0.7);
+  background: rgba(60, 60, 59, 0.25);
 }
