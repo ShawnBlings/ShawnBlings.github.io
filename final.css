@@ -52,7 +52,7 @@ background:rgb(90,150,119);
 position:  relative;
 margin-top: auto;
 background-color:#aaaaaa;
-padding: 70px 0;
+padding: 50px 0;
 width: 100%;
 display: block;
 justify-content: space-between;
@@ -750,6 +750,47 @@ background: rgba(60, 60, 59, 0.4);
 
 /* CSS Kontakt*/
 
+@media screen and (min-width: 631px) {
+  .contactContainer .contactInfo .box .text h3 {
+      font-size: 2rem;
+  }
+.contactContainer .contactInfo .box .text p{
+  font-size: 1rem;
+}
+.contactForm h2{
+  font-size: 2.5rem;
+}
+.contactForm .inputBox span{
+  font-size: 1rem;
+}
+.contactContainer .contactInfo .box .icon img{
+  min-width: 6vw;
+  height: auto;
+  padding-top: 20%;
+}
+}
+
+@media screen and (max-width: 630px) {
+.contactContainer .contactInfo .box .text h3 {
+      font-size: 1.5rem;
+  }
+  .contactContainer .contactInfo .box .text p{
+  font-size: 1rem;
+  }
+  .contactForm h2{
+    font-size: 1.5rem;
+  }
+  .contactForm .inputBox span{
+  font-size: 0.75rem;
+  }
+  .contactContainer .contactInfo .box .icon img{
+    max-width: 10vw;
+    height: auto;
+    padding-top: 50%;
+  }
+}
+
+
 .contact{
   position: relative;
   min-height: 100vh;
@@ -797,23 +838,18 @@ margin-top: 30px;
 }
 
 .contactContainer .contactInfo .box .icon{
-  min-width: 16px;
-  height: 16px;
-  padding-top: 2%;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items:baseline;
   border-radius: 50%;
   font-size: 22px;
+  float: left;
 }
-
-
 
 .contactContainer .contactInfo .box .text{
   display: flex;
   margin-left: 5%;
-  font-size: 16px;
   color: #fff;
   flex-direction: column;
   font-weight:300;
@@ -838,7 +874,6 @@ margin-top: 30px;
   background: rgba(60, 60, 59, 0.4);
 }
 .contactForm h2{
-  font-size: 30px;
   color: #fff;
   font-weight: 500;
 }
@@ -867,7 +902,6 @@ margin-top: 10px;
   position: absolute;
   left: 0;
   padding: 5px 0;
-  font-size: 16px;
   margin: 10px 0;
   pointer-events: none;
   transition: 0.5s;
