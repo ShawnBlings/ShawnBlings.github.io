@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:  border-box;
     font-family: poppins, sans-serif;
     text-decoration: none;
 
@@ -11,19 +11,19 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
 body{
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
 background:rgb(90,150,119);
 }
 
-footer{
 
-}
 
 /* CSS Hintergründe*/
 
@@ -48,6 +48,93 @@ footer{
     background-position:center;
 }
 
+.footer{
+position:  relative;
+margin-top: auto;
+background-color:#aaaaaa;
+padding: 70px 0;
+width: 100%;
+display: block;
+justify-content: space-between;
+height: 35vh;
+bottom: 0;
+}
+
+.footer-container{
+max-width: 1170px;
+margin-left: 10vw;
+
+}
+
+.footer-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer ul{
+  list-style: none;
+}
+
+.footer-col{
+  width: 50%;
+  padding: 0 15px;
+}
+
+.footer-col h4{
+  font-size: 18px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 3vh;
+  text-align:  left;
+}
+
+.footer-col h4::before{
+content: '';
+position: absolute;
+left: 0;
+top: 4vh;
+background-color: #009688;
+height: 2px;
+box-sizing: border-box;
+width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+margin-bottom: 1vh;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #222222;
+  text-align-last:  left;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color: #000000;
+  padding-left: 8px;
+}
+
+@media(min-width: 767px) {
+  .footer-col {
+    width:   50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 766px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
 
 /* CSS Navbar*/
 
@@ -67,7 +154,7 @@ footer{
 .navbar{
   width: 100%;
   display: block;
-text-align-last: center;
+  text-align-last: center;
   justify-content: space-between;
   position: absolute;
   z-index: 1;
@@ -131,7 +218,7 @@ text-align-last: center;
 
 @media screen and (min-width: 601px) {
   .picture img {
-    width: 330px;
+    width: 440px;
     height: auto;
     margin-top: 4vh;
   }
@@ -156,6 +243,8 @@ text-align-last: center;
 display: grid;
 place-items: center;
 position: relative;
+margin-bottom: 15vh;
+margin-top: 15vh;
 }
 
 .picture img:hover{
@@ -525,7 +614,11 @@ margin-top: 1vh;
 @media print{
   .navbar {
     visibility: hidden;
-  } body {
+  }
+  .footer{
+    visibility: hidden;
+  }
+  body {
     visibility: visible;
   }
 }
