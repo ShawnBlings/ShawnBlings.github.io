@@ -56,8 +56,9 @@ padding: 70px 0;
 width: 100%;
 display: block;
 justify-content: space-between;
-height: 35vh;
+height: 45vh;
 bottom: 0;
+
 }
 
 .footer-container{
@@ -216,19 +217,21 @@ margin-bottom: 1vh;
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 612px) {
   .picture img {
     width: 440px;
     height: auto;
     margin-top: 4vh;
+    margin-bottom: 4vh;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 611px) {
   .picture img {
-    width: 220px;
+    width: 330px;
     height: auto;
     margin-top: 4vh;
+    margin-bottom: 4vh;
   }
 }
 
@@ -703,11 +706,23 @@ button{
   border-radius: 33%;
 }
 
+@media screen and (min-width: 801px) {
+  .expertise {
+    width: 22%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .expertise{
+    width: 40%;
+  }
+}
+
 .expertise{
 display: inline-block;
 align-items: center;
 float: left;
-width: 22%;
+
 height: auto;
 padding: 30px 10px;
 margin-left: 2.25%;
@@ -759,8 +774,6 @@ background: rgba(60, 60, 59, 0.4);
   color: #fff;
 
 }
-
-
 
 .contactContainer{
 width: 100%;
@@ -950,12 +963,14 @@ h1{
 @media screen and (min-width: 1001px) {
   .AboutMe .contact .content {
     margin-top: 4vh;
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .AboutMe .contact .content {
     margin-top: 10vh;
+    width: 85%;
   }
 }
 
@@ -963,7 +978,6 @@ h1{
 
   display: inline-block;
   position:relative;
-  width: 60%;
   height: auto;
   text-align: center;
   box-shadow: 0 0 15px 1px rgba(0, 150, 136, 0.7);
