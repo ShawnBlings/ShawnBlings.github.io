@@ -764,7 +764,7 @@ background: rgba(60, 60, 59, 0.4);
   font-size: 1rem;
 }
 .contactContainer .contactInfo .box .icon img{
-  min-width: 6vw;
+  min-width: 4.5vw;
   height: auto;
   padding-top: 20%;
 }
