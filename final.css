@@ -624,6 +624,9 @@ margin-top: 1vh;
   body {
     visibility: visible;
   }
+  button{
+    visibility: hidden;
+  }
 }
 
 button{
